@@ -22,10 +22,18 @@
             //PrintWelcomeMessage();
             //#endregion
 
-            # region question4
-            PrintBookTitle("Clean Code");
-            #endregion
+            //# region question4
 
+            //PrintBookTitle("Clean Code");
+
+            //#endregion
+            #region question5
+            //call by value 
+            int pages = 400;
+            Console.WriteLine($"before calling pages are: {pages}");
+            AddBonusPages(pages);
+            Console.WriteLine($"after calling pages are: {pages}");
+            #endregion
 
         }
         //#region question3
@@ -35,10 +43,17 @@
         //}
         //#endregion
 
-        #region question4
-        public static void PrintBookTitle(string title)
+        //#region question4
+        //public static void PrintBookTitle(string title)
+        //{
+        //    Console.WriteLine($"Booktitle is: {title}");
+        //}
+        //#endregion
+
+        #region question5
+        public static int AddBonusPages(int pages)
         {
-            Console.WriteLine($"Booktitle is: {title}");
+            return(pages += 50);
         }
         #endregion
     }
