@@ -54,13 +54,21 @@ namespace c_basics04
             //    Console.WriteLine($"after calling pages are: {pages}");
             //    #endregion
 
-            #region question8
-            double[] prices = { 25.5, 40.0 };
-            Console.WriteLine($"before calling array : {prices}");
-            Console.WriteLine($"before calling length  : {prices.Length}");
-            ReplaceArray(ref prices);
-            Console.WriteLine($"after calling  : {prices}");
-            Console.WriteLine($"after calling length  : {prices.Length}");
+            //#region question8
+            //double[] prices = { 25.5, 40.0 };
+            //Console.WriteLine($"before calling array : {prices}");
+            //Console.WriteLine($"before calling length  : {prices.Length}");
+            //ReplaceArray(ref prices);
+            //Console.WriteLine($"after calling  : {prices}");
+            //Console.WriteLine($"after calling length  : {prices.Length}");
+            //#endregion
+
+            #region question9
+            Console.WriteLine("in case of cleancode");
+            Console.WriteLine(TryGetPrice("CleanCode", out double clean_price));
+            Console.WriteLine("=============================");
+            Console.WriteLine("another title");
+            Console.WriteLine(TryGetPrice("iii", out double ano_title));
             #endregion
 
         }
@@ -100,12 +108,29 @@ namespace c_basics04
         //  }
         // #endregion
 
-        #region question8
-        public static void ReplaceArray(ref double[] prices)
-        {
-            prices = new double[] { 10.0, 12.5, 15.0 };
-        }
-            #endregion
-        }
+        //#region question8
+        //public static void ReplaceArray(ref double[] prices)
+        //{
+        //    prices = new double[] { 10.0, 12.5, 15.0 };
+        //}
+        //    #endregion
 
+
+        #region question9
+       public static bool TryGetPrice(string title, out double price)
+        {
+            if (title.Equals("CleanCode"))
+            {
+                price = 25.5;
+                return true;
+            }
+            else
+            {
+                price =0;
+                return false;
+            }
+        }
+        #endregion
     }
+
+}
