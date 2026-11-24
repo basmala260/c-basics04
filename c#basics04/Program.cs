@@ -71,9 +71,14 @@ namespace c_basics04
             //Console.WriteLine(TryGetPrice("iii", out double ano_title));
             //#endregion
 
-            #region question10
-            PrintBookInfo("CleanCode");
-            PrintBookInfo("cleancode", 350);
+            //#region question10
+            //PrintBookInfo("CleanCode");
+            //PrintBookInfo("cleancode", 350);
+            //#endregion
+
+            #region question11
+            //passing by name
+            PrintBookInfo(pages:350, title: "cleancode");
             #endregion
 
         }
@@ -137,7 +142,7 @@ namespace c_basics04
         // }
         // #endregion
 
-        #region question10
+        #region question10&11
         public static void PrintBookInfo(string title, int pages = 300)
         {
             Console.WriteLine($"title is: {title} \n pages are:{pages} ");
