@@ -16,17 +16,29 @@
             //};
             //Console.WriteLine(shelfCopies[1,0]);
             //#endregion
-            #region question3
 
-            PrintWelcomeMessage();
+            //#region question3
+
+            //PrintWelcomeMessage();
+            //#endregion
+
+            # region question4
+            PrintBookTitle("Clean Code");
             #endregion
 
 
         }
-        #region question3
-        public static void PrintWelcomeMessage()
+        //#region question3
+        //public static void PrintWelcomeMessage()
+        //{
+        //    Console.WriteLine("Welcome to the Library!");
+        //}
+        //#endregion
+
+        #region question4
+        public static void PrintBookTitle(string title)
         {
-            Console.WriteLine("Welcome to the Library!");
+            Console.WriteLine($"Booktitle is: {title}");
         }
         #endregion
     }
