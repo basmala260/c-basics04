@@ -27,15 +27,25 @@
             //PrintBookTitle("Clean Code");
 
             //#endregion
-            #region question5
-            //call by value 
-            int pages = 400;
-            Console.WriteLine($"before calling pages are: {pages}");
-            AddBonusPages(pages);
-            Console.WriteLine($"after calling pages are: {pages}");
+            //#region question5
+            ////call by value 
+            //int pages = 400;
+            //Console.WriteLine($"before calling pages are: {pages}");
+            //AddBonusPages(pages);
+            //Console.WriteLine($"after calling pages are: {pages}");
+            //#endregion
+
+            #region question6
+            //passing by value for refernce type
+            double[] prices = { 25.5, 40.0 };
+            Console.WriteLine($"before calling price[0]is : {prices[0]}");
+            ApplyDiscount(prices);
+            Console.WriteLine($"after calling price[0]is : {prices[0]}");
             #endregion
 
+
         }
+        //*****************************methods*********************************//
         //#region question3
         //public static void PrintWelcomeMessage()
         //{
@@ -50,10 +60,17 @@
         //}
         //#endregion
 
-        #region question5
-        public static int AddBonusPages(int pages)
+        //    #region question5
+        //    public static int AddBonusPages(int pages)
+        //    {
+        //        return(pages += 50);
+        //    }
+        //    #endregion
+
+        #region question6
+        public static void ApplyDiscount(double[] prices)
         {
-            return(pages += 50);
+            prices[0] -= 5;
         }
         #endregion
     }
