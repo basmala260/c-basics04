@@ -63,12 +63,17 @@ namespace c_basics04
             //Console.WriteLine($"after calling length  : {prices.Length}");
             //#endregion
 
-            #region question9
-            Console.WriteLine("in case of cleancode");
-            Console.WriteLine(TryGetPrice("CleanCode", out double clean_price));
-            Console.WriteLine("=============================");
-            Console.WriteLine("another title");
-            Console.WriteLine(TryGetPrice("iii", out double ano_title));
+            //#region question9
+            //Console.WriteLine("in case of cleancode");
+            //Console.WriteLine(TryGetPrice("CleanCode", out double clean_price));
+            //Console.WriteLine("=============================");
+            //Console.WriteLine("another title");
+            //Console.WriteLine(TryGetPrice("iii", out double ano_title));
+            //#endregion
+
+            #region question10
+            PrintBookInfo("CleanCode");
+            PrintBookInfo("cleancode", 350);
             #endregion
 
         }
@@ -116,19 +121,26 @@ namespace c_basics04
         //    #endregion
 
 
-        #region question9
-       public static bool TryGetPrice(string title, out double price)
+        // #region question9
+        //public static bool TryGetPrice(string title, out double price)
+        // {
+        //     if (title.Equals("CleanCode"))
+        //     {
+        //         price = 25.5;
+        //         return true;
+        //     }
+        //     else
+        //     {
+        //         price =0;
+        //         return false;
+        //     }
+        // }
+        // #endregion
+
+        #region question10
+        public static void PrintBookInfo(string title, int pages = 300)
         {
-            if (title.Equals("CleanCode"))
-            {
-                price = 25.5;
-                return true;
-            }
-            else
-            {
-                price =0;
-                return false;
-            }
+            Console.WriteLine($"title is: {title} \n pages are:{pages} ");
         }
         #endregion
     }
