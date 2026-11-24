@@ -76,9 +76,17 @@ namespace c_basics04
             //PrintBookInfo("cleancode", 350);
             //#endregion
 
-            #region question11
-            //passing by name
-            PrintBookInfo(pages:350, title: "cleancode");
+            //#region question11
+            ////passing by name
+            //PrintBookInfo(pages:350, title: "cleancode");
+            //#endregion
+
+
+            #region question12
+            string title1 = "c#";
+            string title2 = ".net";
+            string title3 = "cleancode";
+            PrintAllTitles(title1,title2,title3);
             #endregion
 
         }
@@ -142,10 +150,20 @@ namespace c_basics04
         // }
         // #endregion
 
-        #region question10&11
-        public static void PrintBookInfo(string title, int pages = 300)
+        //#region question10&11
+        //public static void PrintBookInfo(string title, int pages = 300)
+        //{
+        //    Console.WriteLine($"title is: {title} \n pages are:{pages} ");
+        //}
+        //#endregion
+
+        #region question12
+        public static void PrintAllTitles(params string[] titles)
         {
-            Console.WriteLine($"title is: {title} \n pages are:{pages} ");
+            foreach(string title in titles)
+            {
+                Console.WriteLine(title);
+            }
         }
         #endregion
     }
