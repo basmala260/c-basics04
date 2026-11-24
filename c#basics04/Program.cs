@@ -1,4 +1,7 @@
-﻿namespace c_basics04
+﻿using System.Diagnostics;
+using static System.Runtime.InteropServices.JavaScript.JSType;
+
+namespace c_basics04
 {
     internal class Program
     {
@@ -43,14 +46,22 @@
             //Console.WriteLine($"after calling price[0]is : {prices[0]}");
             //#endregion
 
-            #region question7 
-            ////call by reference
-            int pages = 400;
-            Console.WriteLine($"before calling pages are: {pages}");
-            AddBonusPages(ref pages);
-            Console.WriteLine($"after calling pages are: {pages}");
-            #endregion
+            //    #region question7 
+            //    //call by reference
+            //    int pages = 400;
+            //    Console.WriteLine($"before calling pages are: {pages}");
+            //    AddBonusPages(ref pages);
+            //    Console.WriteLine($"after calling pages are: {pages}");
+            //    #endregion
 
+            #region question8
+            double[] prices = { 25.5, 40.0 };
+            Console.WriteLine($"before calling array : {prices}");
+            Console.WriteLine($"before calling length  : {prices.Length}");
+            ReplaceArray(ref prices);
+            Console.WriteLine($"after calling  : {prices}");
+            Console.WriteLine($"after calling length  : {prices.Length}");
+            #endregion
 
         }
         //*****************************methods*********************************//
@@ -82,11 +93,19 @@
         //}
         //#endregion
 
-        #region question7
-        public static int AddBonusPages( ref int pages)
-           {
-               return(pages += 50);
-          }
-         #endregion
+        //#region question7
+        //public static int AddBonusPages( ref int pages)
+        //   {
+        //       return(pages += 50);
+        //  }
+        // #endregion
+
+        #region question8
+        public static void ReplaceArray(ref double[] prices)
+        {
+            prices = new double[] { 10.0, 12.5, 15.0 };
+        }
+            #endregion
+        }
+
     }
-}
