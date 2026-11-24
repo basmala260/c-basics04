@@ -35,12 +35,20 @@
             //Console.WriteLine($"after calling pages are: {pages}");
             //#endregion
 
-            #region question6
+            //#region question6
             //passing by value for refernce type
-            double[] prices = { 25.5, 40.0 };
-            Console.WriteLine($"before calling price[0]is : {prices[0]}");
-            ApplyDiscount(prices);
-            Console.WriteLine($"after calling price[0]is : {prices[0]}");
+            //double[] prices = { 25.5, 40.0 };
+            //Console.WriteLine($"before calling price[0]is : {prices[0]}");
+            //ApplyDiscount(prices);
+            //Console.WriteLine($"after calling price[0]is : {prices[0]}");
+            //#endregion
+
+            #region question7 
+            ////call by reference
+            int pages = 400;
+            Console.WriteLine($"before calling pages are: {pages}");
+            AddBonusPages(ref pages);
+            Console.WriteLine($"after calling pages are: {pages}");
             #endregion
 
 
@@ -67,11 +75,18 @@
         //    }
         //    #endregion
 
-        #region question6
-        public static void ApplyDiscount(double[] prices)
-        {
-            prices[0] -= 5;
-        }
-        #endregion
+        //#region question6
+        //public static void ApplyDiscount(double[] prices)
+        //{
+        //    prices[0] -= 5;
+        //}
+        //#endregion
+
+        #region question7
+        public static int AddBonusPages( ref int pages)
+           {
+               return(pages += 50);
+          }
+         #endregion
     }
 }
