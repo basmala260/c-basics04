@@ -9,15 +9,25 @@
             //Console.WriteLine(prices[1]);
             //#endregion
 
-            #region question2
-            int[,] shelfCopies = {
-            { 3,5},
-            {1,4 }
-            };
-            Console.WriteLine(shelfCopies[1,0]);
+            //#region question2
+            //int[,] shelfCopies = {
+            //{ 3,5},
+            //{1,4 }
+            //};
+            //Console.WriteLine(shelfCopies[1,0]);
+            //#endregion
+            #region question3
+
+            PrintWelcomeMessage();
             #endregion
 
 
         }
+        #region question3
+        public static void PrintWelcomeMessage()
+        {
+            Console.WriteLine("Welcome to the Library!");
+        }
+        #endregion
     }
 }
